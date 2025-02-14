@@ -1,0 +1,145 @@
+.footer{
+    height: 110vh;
+    width: 100%;
+    background: pink;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+
+.footerContainer{
+    height: 105vh;
+    width: 98%;
+    /* background: yellow; */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+   flex-direction: column;
+}
+
+.wrap{
+    height: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    gap: 10px;
+    /* background: blue; */
+
+ 
+}
+
+.inner{
+    padding: 20px;
+    height: 90%;
+    width: 80%;
+    /* background: gray; */
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+
+    & p {
+        font-size: 15px;
+    }
+
+    & h2 {
+        font-size: 13px;
+    }
+
+}
+
+.input{
+    height: 40%;
+    color: black;
+    background: white;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+}
+
+.social{
+    height: 10%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.inner1{
+    height: 95%;
+    width: 40%;
+    /* background: green; */
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 15px;
+
+    & li {
+        list-style: none;
+    }
+   
+}
+.inner2{
+    height: 75%;
+    width: 40%;
+    /* background: green; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 60px;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 15px;
+
+    & li {
+        list-style: none;
+    }
+   
+    
+}
+.inner3{
+    height: 70%;
+    width: 60%;
+    /* background: goldenrod; */
+}
+
+.wrap2{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    background: pink;
+    border: 200px;
+}
+
+
+.wrap1{
+   height: 70%;
+   width: 40%;
+   /* background: purple; */
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+
+   & img {
+         width: 30%;
+         height: 30%;
+   } 
+
+}
+
+.wrap3{
+    height: 90%;
+   width: 43%;
+   /* background: peru; */
+   border-bottom: 10px;
+}
+    
+
+

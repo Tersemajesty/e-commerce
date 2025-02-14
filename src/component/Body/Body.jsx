@@ -3,7 +3,7 @@ import style from "./Body.module.css"
  const Body = () => {
     return (
         <div className={style.wrrap}>
-            <div className={style.Bodywrap}>
+            {/* <div className={style.Bodywrap}>
                 <img src="/perf1.jpg" alt="" />
             </div>
             <div className={style.Bodywrap1}>
@@ -14,7 +14,10 @@ import style from "./Body.module.css"
             </div>
             <div className={style.Bodywrap3}>
                 <img src="/perf3.jpg" alt="" />
-            </div>
+            </div> */}
+
+
+            huuuu
         </div>
     )
 }

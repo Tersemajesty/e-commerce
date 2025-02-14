@@ -3,13 +3,23 @@
     width: 100%;
     background: pink;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inner{
+    height: 90%;
+    width: 99%;
+    /* background: #000; */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo{
-    height: 70%;
-    width: 20%;
+    height: 79%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -26,70 +36,29 @@
     }
 }
 
-.hit{
-    height:75% ;
-    width: 39%;
-    /* background: #000; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    & button {
-        height: 60%;
-        width: 20%;
-        background: white;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-    }
-}
-
-.wrap{
-    height: 69%;
-    width: 65%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    /* border: none; */
-
-    & input {
-        height: 70%;
-        width:80%;
-        outline: none;
-        border-radius: 10px;
-        border: none;
-    }
-
-   
-}
-
-
-
-.wrapper{
+.home{
     height: 70%;
-    width: 20%;
-    /* background: green; */
+    width: 44%;
+    /* background: red; */
     display: flex;
     align-items: center;
     justify-content: space-around;
 
-   
+    & h2 {
+        font-size: 18px;
+    }
 }
 
 .user{
+    height: 70%;
+    width: 19%;
     /* background: purple; */
-    height: 80%;
-    width: 90%;
+    font-size: 17px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-
+    justify-content: space-around;
 
     & h1 {
-        font-size: 22px;
-        font-weight: 100;
+        font-size: 16px;
     }
 }
