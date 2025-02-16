@@ -15,7 +15,7 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        if (!email && !password) {
+        if (!email || !password) {
             return toast.error("Enter credentials");
         }
         try {
@@ -23,11 +23,13 @@ const Login = () => {
             console.log(response);
             if (response?.status === 200) {
                 localStorage.setItem("userData", JSON.stringify(response?.data?.data));
-                navigate('/Dashboard');
             }
+
             toast.success(response?.data?.message);
+            navigate("/");
         } catch (err) {
             console.log(err);
+            alert("Invalid credentials")
         }
     };
 

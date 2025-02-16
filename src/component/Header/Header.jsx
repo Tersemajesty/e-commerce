@@ -14,7 +14,7 @@ const Header = () => {
       <GiFlowerTwirl size={55}/>
       <header>Terse <span>Majesty</span></header> 
   </div>
-    <div className={style.home}>
+    <div className={style.home} >
         <NavLink to={"/Home"}>
         <h2>Home</h2>
         </NavLink>
@@ -29,13 +29,11 @@ const Header = () => {
         </NavLink>
    </div>
     <div className={style.user}>
-         <FaRegUser size={25}  />
          <NavLink to={"/user"}>
-         <h1>user</h1>
+         <FaRegUser size={25}  />
          </NavLink>
-         <AiOutlineShoppingCart size={25} />
          <NavLink to={"/cart"}>
-         <h1>Cart</h1>
+         <AiOutlineShoppingCart size={25} />
          </NavLink>
          <NavLink to={"/Login"}>
          <h1>Login</h1>

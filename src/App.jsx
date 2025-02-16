@@ -70,7 +70,7 @@ const App = () => {
       element: <PrivateRoute/>,
       children:[
         {
-          path: './Dashboard',
+          path: 'Dashboard',
           element: <Dashboard/>
         }
       ]

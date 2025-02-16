@@ -1,7 +1,8 @@
+import style from './pages.module.css';
 
  const Dashboard = () => {
     return (
-        <div>
+        <div className={style.dashboard}>
             <h1>dashBoard</h1>
         </div>
     )
