@@ -1,86 +1,51 @@
-import "./App.css"
-import Body from "./component/Body/Body"
-import HomeRoute from "./Route/HomeRoute";
-import Home from "./Pages/Home"
+import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import ProductPage from "./Pages/ProductPage"
-import Shop from "./Pages/Shop"
-import Signup from "./Pages/Signup"
-import Login from "./Pages/Login"
-import Cart from "./Pages/Cart"
-import User from "./Pages/User"
-import WishList from "./Pages/WishList"
-import PrivateRoute from "./Route/PrivateRoute";
-import Dashboard from "./Pages/Dashboard";
+import Home from "./component/Home/Home";
+import Explore from "./pages/Explore";
+import Products from "./pages/Products";
+import Cart from "./Pages/Cart";
+import Admin from "./Pages/Admin"
+import NotFound from "./pages/NotFound";
+import Account from "./Pages/Account";
+import HomeRoute from "./Route/HomeRoute";
+import PrivateRoute from "./Route/PrivateRoute"
+import { useEffect, useState } from "react";
+import Loader from "./component/Loader/Loader";
 
-const App = () => {
- const router = createBrowserRouter([
+
+
+const router = createBrowserRouter([
+  
     {
-     path: "",
-     element: <HomeRoute />,
-
-       children: [
-          
-          {
-            path: "/productpage",
-            element:<ProductPage/>
-          },
-
-          {
-            path: "/Home",
-            element:<Home/>
-          },
-
-          {
-            path: "/shop",
-            element:<Shop/>
-          }, {
-            path: "/user",
-            element:<User/>
-          },
-
-          {
-            path:"/wishlist",
-            element: <WishList />
-          },
-
-          {
-            path:"/Cart",
-            element: <Cart />
+    path: "/",
+    element: <HomeRoute />,
+    children: [
+      { path:"/", element: <Home/> },
+      { path: "explore", element: <Explore /> },
+      { path: "products", element: <Products /> },
+      { path: "cart", element: <Cart /> },
+      { path: "account", element: <Account /> },
+      {
+        element: <PrivateRoute/>,
+        children:[
+          {path: "/admin",
+            element:<Admin/>
           }
-       ]
-    },
+        ]
+      },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
+  
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-    {
-        path: "/login",
-        element: <Login />
-    },
+  useEffect (() => {
+    setTimeout(() => setIsLoading(false), 2000);
+  }, []);
 
-    {
-      path: "/body",
-      element: <Body />
-    },
+  return isLoading ? <Loader /> : <RouterProvider router={router}/>};
 
-    {
-        path: "/signup",
-        element: <Signup />
-    },
-    {
-      path:"/private",
-      element: <PrivateRoute/>,
-      children:[
-        {
-          path: 'Dashboard',
-          element: <Dashboard/>
-        }
-      ]
-    }
- ])
-    
-    return (
-       <RouterProvider router={router}/>
 
-    )
-}
-
-export default App
+export default App;

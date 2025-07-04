@@ -1,0 +1,131 @@
+.product-card {
+  background: purple;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height:420px;
+  gap: 20px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-container {
+  position: relative;
+  background: green;
+  height: 200px;
+  width: 100%; 
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.product-image {
+  width: 1000px;
+  height: 1000px;
+  object-fit: contain; /* Makes the image fill the container and crop if needed */
+  display: flex;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+
+
+.category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.category-badge.men { background: #3b82f6; }
+.category-badge.women { background: #ec4899; }
+.category-badge.kids { background: #10b981; }
+.category-badge.diffusers { background: #f97316; }
+.category-badge.body-sprays { background: #06b6d4; }
+.category-badge.body-moisturizers { background: #8b5cf6; }
+.category-badge.default { background: #6b7280; }
+
+.size-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.size-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #9333ea;
+}
+
+.product-content {
+  padding: 1.5rem;
+}
+
+.product-brand {
+  margin-bottom: 0.5rem;
+}
+
+.brand-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9333ea;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(to right, #7c3aed, #db2777);
+  transform: scale(1.05);
+}
