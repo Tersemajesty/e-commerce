@@ -1,11 +1,11 @@
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Home from "./component/Home/Home";
-import Explore from "./pages/Explore";
-import Products from "./pages/Products";
+import Explore from "./Pages/Explore";
+import Products from "./Pages/Products";
 import Cart from "./Pages/Cart";
 import Admin from "./Pages/Admin"
-import NotFound from "./pages/NotFound";
+import NotFound from "./Pages/NotFound";
 import Account from "./Pages/Account";
 import HomeRoute from "./Route/HomeRoute";
 import PrivateRoute from "./Route/PrivateRoute"

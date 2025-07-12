@@ -1,10 +1,9 @@
 .product-card {
-  background: purple;
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
-  height:420px;
+  height:400px;
   gap: 20px;
 }
 
@@ -15,19 +14,20 @@
 
 .product-image-container {
   position: relative;
-  background: green;
   height: 200px;
   width: 100%; 
-  overflow: hidden; /* Ensures no overflow */
+  overflow: hidden; 
 }
 
-.product-image {
-  width: 1000px;
-  height: 1000px;
-  object-fit: contain; /* Makes the image fill the container and crop if needed */
-  display: flex;
+.product-images {
+  width: 100%; 
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
+   border-top-right-radius: 0.75rem; 
 }
 
 
@@ -94,7 +94,7 @@
   margin-bottom: 1rem;
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  /* -webkit-line-clamp: 2; */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

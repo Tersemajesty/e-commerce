@@ -32,13 +32,13 @@ const ProductCard = ({ product }) => {
         <img 
           src={product.image} 
           // alt={product.name}
-          className="product-image"
+          className="product-images"
         />
-        <div className={`category-badge ${categoryBadge.class}`}>
+        {/* <div className={`category-badge ${categoryBadge.class}`}>
           {categoryBadge.text}
-        </div>
+        </div> */}
         <div className="size-badge">
-          <span className="size-text">{product.size}</span>
+          {/* <span className="size-text">{product.size}</span> */}
         </div>
       </div>
       
