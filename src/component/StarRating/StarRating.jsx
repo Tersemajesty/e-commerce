@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoStar } from "react-icons/io5";import './StarRating.css';
-import "./staRating.css";
+import "./starRating.css";
+
 const StarRating = ({ rating, size = 16, showRating = true, className = "" }) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
