@@ -1,0 +1,38 @@
+.star-rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star-rating-stars {
+  display: flex;
+}
+
+.star-filled {
+  fill: #facc15;
+  color: #facc15;
+}
+
+.star-empty {
+  color: #d1d5db;
+}
+
+.star-half-container {
+  position: relative;
+}
+
+.star-half-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 50%;
+}
+
+.star-rating-text {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-left: 0.25rem;
+}

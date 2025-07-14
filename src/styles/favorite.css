@@ -1,0 +1,103 @@
+.favorites-container {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites-empty {
+  text-align: center;
+}
+
+.favorites-empty-icon {
+  margin: 0 auto 1.5rem auto;
+  color: #d1d5db;
+}
+
+.favorites-empty-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.favorites-empty-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.favorites-explore-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.favorites-explore-btn:hover {
+  background: linear-gradient(to right, #7c3aed, #db2777);
+}
+
+.favorites-content {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.favorites-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.favorites-header {
+  margin-bottom: 2rem;
+}
+
+.favorites-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.favorites-title-icon {
+  color: #ef4444;
+}
+
+.favorites-count {
+  font-size: 1.25rem;
+  color: #4b5563;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .favorites-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .favorites-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -5,14 +5,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 15vh;
+  height: 16vh;
 }
 
 .navbar-container {
-  max-width: 1400px;
+  max-width: 1200px;
+  /* background: #000; */
   margin: 0 auto;
   padding: 0 1rem;
-  height: 90%;
+  height: 100%;
 }
 
 .navbar-content {
@@ -58,7 +59,7 @@
 }
 .search-container {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 2rem;
 }
 
@@ -72,8 +73,9 @@
   padding: 0.75rem 3rem 0.75rem 1rem;
   border: 2px solid #e5e7eb;
   border-radius: 25px;
-  font-size: 0.875rem;
+  font-size: 14px;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .search-input:focus {
@@ -125,7 +127,7 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 30px;
 }
 
 .user-menu {

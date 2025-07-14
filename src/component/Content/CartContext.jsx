@@ -12,6 +12,7 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [favoriteItems, setFavoriteItems] = useState([]);
 
   const addToCart = (product) => {
     setCartItems(prev => {
@@ -55,6 +56,33 @@ export const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
+  // Favorites functionality
+  const addToFavorites = (product) => {
+    setFavoriteItems(prev => {
+      const exists = prev.find(item => item.id === product.id);
+      if (!exists) {
+        return [...prev, product];
+      }
+      return prev;
+    });
+  };
+
+  const removeFromFavorites = (productId) => {
+    setFavoriteItems(prev => prev.filter(item => item.id !== productId));
+  };
+
+  const isFavorite = (productId) => {
+    return favoriteItems.some(item => item.id === productId);
+  };
+
+  const toggleFavorite = (product) => {
+    if (isFavorite(product.id)) {
+      removeFromFavorites(product.id);
+    } else {
+      addToFavorites(product);
+    }
+  };
+
   return (
     <CartContext.Provider value={{
       cartItems,
@@ -63,9 +91,15 @@ export const CartProvider = ({ children }) => {
       updateQuantity,
       getTotalPrice,
       getTotalItems,
-      clearCart
+      clearCart,
+      favoriteItems,
+      addToFavorites,
+      removeFromFavorites,
+      isFavorite,
+      toggleFavorite
     }}>
       {children}
     </CartContext.Provider>
   );
 };
+

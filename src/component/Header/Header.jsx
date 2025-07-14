@@ -52,9 +52,22 @@ import { useAuth } from "../Content/AuthContext";
           {/* Brand */}
           <Link to="/" className="brand">
             <div className="brand-icon"></div>
-            <span className="brand-text">Terse's  <strong className='strong'>Elixir</strong></span>
           </Link>
+
+           <div className="nav-links">
+           
+            
           
+            {isAuthenticated && user?.role === 'admin' && (
+              <Link 
+                to="/admin" 
+                className={`nav-link ${isActive('/admin') ? 'active' : ''}`}
+              >
+                Admin
+              </Link>
+            )}
+          </div>
+
           {/* Search Bar - Desktop */}
           <div className="search-container">
             <form onSubmit={handleSearch} className="search-form">
@@ -69,36 +82,12 @@ import { useAuth } from "../Content/AuthContext";
             </form>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="nav-links">
-            <Link 
-              to="/" 
-              className={`nav-link ${isActive('/') ? 'active' : ''}`}
-            >
-              Home
-            </Link>
-            <Link 
+         <Link 
               to="/explore" 
               className={`nav-link ${isActive('/explore') ? 'active' : ''}`}
             >
               Explore
             </Link>
-            <Link 
-              to="/products" 
-              className={`nav-link ${isActive('/products') ? 'active' : ''}`}
-            >
-              Products
-            </Link>
-            {isAuthenticated && user?.role === 'admin' && (
-              <Link 
-                to="/admin" 
-                className={`nav-link ${isActive('/admin') ? 'active' : ''}`}
-              >
-                Admin
-              </Link>
-            )}
-          </div>
-
           {/* Right Side Icons */}
           <div className="nav-actions">
             {/* User Account */}

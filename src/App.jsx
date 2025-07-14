@@ -11,6 +11,8 @@ import HomeRoute from "./Route/HomeRoute";
 import PrivateRoute from "./Route/PrivateRoute"
 import { useEffect, useState } from "react";
 import Loader from "./component/Loader/Loader";
+import ProductDetailPage from "./Pages/ProductDetailpage";
+
 
 
 
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
       { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
       { path: "account", element: <Account /> },
+      { path: "products/:id", element: <ProductDetailPage /> },
       {
         element: <PrivateRoute/>,
         children:[
